@@ -24,12 +24,13 @@ import dotenv
 
 # Allow imports from the sibling metac-bot-template directory
 _THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-_TEMPLATE_DIR = os.path.join(_THIS_DIR, "..", "metac-bot-template")
+_PROJECT_DIR = os.path.dirname(_THIS_DIR)
+_TEMPLATE_DIR = os.path.join(_PROJECT_DIR, "..", "metac-bot-template")
 sys.path.insert(0, _TEMPLATE_DIR)
 
-# Load .env from this directory first (contains OPENROUTER_API_KEY etc.),
+# Load .env from project root first (contains OPENROUTER_API_KEY etc.),
 # then fall back to the metac-bot-template directory.
-dotenv.load_dotenv(os.path.join(_THIS_DIR, ".env"))
+dotenv.load_dotenv(os.path.join(_PROJECT_DIR, ".env"))
 dotenv.load_dotenv(os.path.join(_TEMPLATE_DIR, ".env"))
 
 from pydantic import BaseModel, Field
@@ -49,7 +50,7 @@ from forecasting_tools.data_models.conditional_models import (  # noqa: E402
     ConditionalPrediction,
 )
 
-from main import SpringTemplateBot2026  # noqa: E402 (from metac-bot-template)
+from src.main import SpringTemplateBot2026  # noqa: E402 (from metac-bot-template)
 
 logger = logging.getLogger(__name__)
 

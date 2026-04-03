@@ -2,7 +2,11 @@
 import csv
 
 # Find the question with ID 25636
-with open('metaculus_conditionals_2026-03.csv', 'r') as f:
+import os
+_SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+_CSV_PATH = os.path.join(_SCRIPT_DIR, "..", "data", "metaculus_conditionals_2026-03.csv")
+
+with open(_CSV_PATH, 'r') as f:
     reader = csv.DictReader(f)
     for row in reader:
         if row.get('child_post_id') == '25636' or row.get('condition_post_id') == '25636':

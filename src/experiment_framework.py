@@ -18,12 +18,12 @@ from scipy import stats
 from scipy.stats import t as t_dist
 from statsmodels.stats.anova import AnovaRM
 
-from bayes_bot import load_pairs_from_csv, compute_consistency_metrics
+from src.bayes_bot import load_pairs_from_csv, compute_consistency_metrics
 
 warnings.filterwarnings('ignore', category=FutureWarning)
 
 RNG = np.random.default_rng(42)          # reproducible bootstraps
-COMMUNITY_CSV = 'metaculus_conditionals_2026-03.csv'
+COMMUNITY_CSV = 'data/metaculus_conditionals_2026-03.csv'
 
 
 # ── Data loading ──────────────────────────────────────────────────────────────

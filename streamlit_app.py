@@ -30,12 +30,12 @@ import numpy as np
 import streamlit as st
 from pydantic import BaseModel, Field
 
-from bayes_bot import (
+from src.bayes_bot import (
     BayesConsistencyBot,
     ConditionalPair,
     compute_consistency_metrics,
 )
-from experiment_pipelines import _kl_project_quadruple
+from src.experiment_pipelines import _kl_project_quadruple
 from forecasting_tools import GeneralLlm, clean_indents
 
 

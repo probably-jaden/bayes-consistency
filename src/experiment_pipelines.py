@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import minimize
 
-from bayes_bot import compute_consistency_metrics, project_to_ltp_constraint
+from src.bayes_bot import compute_consistency_metrics, project_to_ltp_constraint
 
 
 def apply_ltp_projection(

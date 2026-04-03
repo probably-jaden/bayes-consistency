@@ -30,7 +30,7 @@ sys.path.insert(0, _TEMPLATE_DIR)
 from forecasting_tools import BinaryQuestion, ConditionalQuestion
 from forecasting_tools.data_models.conditional_models import ConditionalPrediction
 
-from bayes_bot import (
+from src.bayes_bot import (
     BayesConsistencyBot,
     ConditionalPair,
     ConsistencyResult,
@@ -46,7 +46,7 @@ from forecasting_tools import ReasonedPrediction
 
 # ── Fixtures ──────────────────────────────────────────────────────────────────
 
-CSV_PATH = os.path.join(_TRIAL_DIR, "metaculus_conditionals_2026-03.csv")
+CSV_PATH = os.path.join(_TRIAL_DIR, "data", "metaculus_conditionals_2026-03.csv")
 
 SAMPLE_PAIR = ConditionalPair(
     conditional_post_id=15159,

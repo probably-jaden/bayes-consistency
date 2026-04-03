@@ -25,9 +25,12 @@ import argparse
 import asyncio
 import logging
 import os
+import sys
 from datetime import datetime
 
-from bayes_bot import (
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+
+from src.bayes_bot import (
     BayesConsistencyBot,
     ConditionalsFirstBot,
     JointPromptBot,
@@ -36,7 +39,7 @@ from bayes_bot import (
     load_pairs_from_csv,
 )
 
-CSV_PATH = os.path.join(os.path.dirname(__file__), "metaculus_conditionals_2026-03.csv")
+CSV_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "metaculus_conditionals_2026-03.csv")
 DEFAULT_N_SAMPLE = 2
 
 
