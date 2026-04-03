@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "trial-bayes-consistency"
+version = "0.1.0"
+description = "Bayes Consistency Trial for Metaculus"
+authors = ["Jaden Earl"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-decouple = "^3.8"
+requests = "^2.32.3"
+asknews = "^0.13.0"
+numpy = "^2.3.0"
+openai = "^2.0.0"
+python-dotenv = "^1.0.1"
+forecasting-tools = "^0.2.80"
+litellm = "^1.40.0"  # Assuming it's needed, from the logs
+matplotlib = "^3.8.0"
+statsmodels = "^0.14.6"
+streamlit = "^1.30.0"
+nest-asyncio = "^1.6.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

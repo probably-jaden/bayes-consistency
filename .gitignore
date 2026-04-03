@@ -1,0 +1,24 @@
+# API keys — never commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# macOS
+.DS_Store
+
+# R
+.Rhistory
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

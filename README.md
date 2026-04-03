@@ -1,8 +1,14 @@
 # bayes-consistency
 
+## Setup
+
+1. Install dependencies: `pip install -r requirements.txt`
+2. Copy `.env.template` to `.env` and fill in your API keys (at least OPENROUTER_API_KEY)
+3. Run: `python run_trial.py`
+
 ## Task
 
-Measure the propensity of forecasting bots to make forecasts that respect Bayes' Rule. 
+Measure the propensity of forecasting bots to make forecasts that respect Bayes' Rule.
 
 ## Background
 
@@ -12,17 +18,13 @@ $$
 P(B \mid A) = \frac{P(A \mid B) \, P(B)}{P(A)}
 $$
 
-Metaculus has many [conditional questions](https://www.metaculus.com/questions/?forecast_type=conditional), which link a “parent” question with forecast $P(A)$ to a “child” question with forecast $P(B)$, and elicitis the two conditional probabilities $P(B \mid A)$ and $P(B \mid ¬A)$. Forecasters often make forecasts that do not respect Bayes’ theorem.
+Metaculus has many [conditional questions](https://www.metaculus.com/questions/?forecast_type=conditional), which link a "parent" question with forecast $P(A)$ to a "child" question with forecast $P(B)$, and elicitis the two conditional probabilities $P(B \mid A)$ and $P(B \mid ¬A)$. Forecasters often make forecasts that do not respect Bayes' theorem.
 
 ## Resources
 
 A csv of conditional questions and forecasts from Metaculus:
 
-[metaculus_conditionals_2026-03.csv](attachment:80040860-5ea5-47ce-acf3-2867dbb1445c:metaculus_conditionals_2026-03.csv)
-
-Our forecasting bot template:
-
-‣
+The dataset of conditional questions and community forecasts was sourced from Metaculus in March 2026.
 
 ## Key Steps
 
