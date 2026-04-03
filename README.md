@@ -1,5 +1,7 @@
 # bayes-consistency
 
+Play with an [app version](https://consistent-bayes.streamlit.app/) 
+
 ## Setup
 
 1. Install dependencies: `pip install -r requirements.txt`
